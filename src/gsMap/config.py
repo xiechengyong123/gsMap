@@ -128,10 +128,10 @@ def track_resource_usage(func):
 
             logger = logging.getLogger("gsMap")
             logger.info("Resource usage summary:")
-            logger.info(f"  • Wall clock time: {wall_time_str}")
-            logger.info(f"  • CPU time: {cpu_time_str}")
-            logger.info(f"  • Average CPU utilization: {avg_cpu_percent:.1f}%")
-            logger.info(f"  • Peak memory usage: {memory_str}")
+            logger.info(f"  * Wall clock time: {wall_time_str}")
+            logger.info(f"  * CPU time: {cpu_time_str}")
+            logger.info(f"  * Average CPU utilization: {avg_cpu_percent:.1f}%")
+            logger.info(f"  * Peak memory usage: {memory_str}")
 
     return wrapper
 

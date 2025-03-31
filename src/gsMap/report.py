@@ -51,7 +51,7 @@ def load_gene_diagnostic_info(csv_file):
 
 def embed_html_content(file_path):
     """Read the content of an HTML file and return it as a string."""
-    with open(file_path) as f:
+    with open(file_path,"r", encoding="utf-8") as f:
         return f.read()
 
 
@@ -165,7 +165,7 @@ def run_report(config: ReportConfig, run_parameters=None):
 
     # Save the generated HTML report in the 'report' directory
     report_file = config.get_gsMap_report_file(config.trait_name)
-    with open(report_file, "w") as f:
+    with open(report_file, "w",encoding="utf-8") as f:
         f.write(output_html)
 
     logger.info(f"Report generated successfully! Saved at {report_file}.")
